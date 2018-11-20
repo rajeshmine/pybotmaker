@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PYBOTMAKER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../../assets/css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+    <script src="./../../assets/js/common.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="fontsize22"><img class="pybotmakerlogo" src="./../../assets/images/BOT-Logo.png"> <span>PYBOTMAKER</span></h3>
+                <p class="alignrgt">powered by Prematix</p>
+                <hr />
+            </div>
+
+            <ul class="list-unstyled components">
+                <p><i class="far fa-user"></i> PREMATIX</p>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="fas fa-book"></i> Intent 1</a>
+                    <ul class="padlft10 collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#" onclick="selectedcontaineropen('trainingphrasecontainer');"><i class="fas fa-chalkboard-teacher"></i>
+                                Training Phrases</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="selectedcontaineropen('actionparacontainer');"><i class="fas fa-chalkboard"></i>
+                                Action and Parameters</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="selectedcontaineropen('responsecontainer');"><i class="fas fa-laptop-code"></i>
+                                Response</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="fas fa-book"></i> Intent 2</a>
+                    <ul class="padlft10 collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#" onclick="selectedcontaineropen('trainingphrasecontainer');"><i class="fas fa-chalkboard-teacher"></i>
+                                Training Phrases</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="selectedcontaineropen('actionparacontainer');"><i class="fas fa-chalkboard"></i>
+                                Action and Parameters</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="selectedcontaineropen('responsecontainer');"><i class="fas fa-laptop-code"></i>
+                                Response</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content -->
+        <div id="content">
+            <nav class="navbar whitebg">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <button type="button" id="sidebarCollapse">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#" onclick="selectedcontaineropen('agentcontainer');"><i class="far fa-user"></i>
+                                    Agent</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="selectedcontaineropen('intentcontainer');"><i class="fas fa-indent"></i>
+                                    Intent</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="selectedcontaineropen('entitycontainer');"><i class="fas fa-book"></i>
+                                    Entity</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="./../createproject/createproject.html"><i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li><a href="#"><i class="far fa-user"></i> Rajesh</a></li>
+                            <li><a href="#"><i class="fas fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="mar10">
+                <!-- AGENTS -->
+                <div class="container-fluid" id="agentcontainer">
+                    <div class="row pad10">
+                        <h4><i class="far fa-user"></i> Agents</h4>
+                        <div class="addinputdiv">
+                            <div class="input-group">
+                                <input type="text" class="form-control createagentinput" placeholder="Agent Name">
+                                <span class="input-group-addon createspan">CREATE AGENT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pad10">
+                        <h4><i class="fas fa-list"></i> Agent List</h4>
+                        <div class="agentlistdiv">
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Agent 1" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Agent 2" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Agent 3" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Agent 4" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Agent 5" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- INTENTS -->
+                <div class="container-fluid" id="intentcontainer">
+                    <div class="row pad10">
+                        <h4><i class="fas fa-indent"></i> Intents</h4>
+                        <div class="addinputdiv">
+                            <div class="input-group">
+                                <input type="text" class="form-control createagentinput" placeholder="Intent Name">
+                                <span class="input-group-addon createspan">CREATE INTENT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pad10">
+                        <h4><i class="fas fa-list"></i> Intent List</h4>
+                        <div class="agentlistdiv">
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Intent 1" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Intent 2" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Intent 3" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Intent 4" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Intent 5" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ENTITIES -->
+                <div class="container-fluid" id="entitycontainer">
+                    <div class="row pad10">
+                        <h4><i class="fas fa-book"></i> Entities</h4>
+                        <div class="addinputdiv">
+                            <div class="input-group">
+                                <input type="text" class="form-control createagentinput" placeholder="Entity Name">
+                                <span class="input-group-addon createspan">CREATE ENTITY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pad10">
+                        <h4><i class="fas fa-list"></i> Entity List</h4>
+                        <div class="agentlistdiv">
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Entity 1" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Entity 2" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Entity 3" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Entity 4" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="Entity 5" readonly>
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TRAINING PHRASES -->
+                <div class="container-fluid" id="trainingphrasecontainer">
+                    <div class="row pad10">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> Training Phrases</h4>
+                        <div class="addinputdiv">
+                            <div class="input-group">
+                                <input type="text" class="form-control createagentinput" placeholder="TRAINING PHRASE">
+                                <span class="input-group-addon createspan">ADD TRAINING PHRASES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pad10">
+                        <h4><i class="fas fa-list"></i> Training Phrase List</h4>
+                        <div class="agentlistdiv">
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="TRAINING PHRASE 1">
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="TRAINING PHRASE 2">
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="TRAINING PHRASE 3">
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="TRAINING PHRASE 4">
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                            <div class="input-group pad10">
+                                <input type="text" class="form-control inputstyle" value="TRAINING PHRASE 5">
+                                <span class="input-group-addon deleteagentspan">DELETE</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="trainingphrasesavebtn">SAVE</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ACTIONS AND PARAMETERS -->
+                <div class="container-fluid" id="actionparacontainer">
+                    <div class="row pad10">
+                        <h4><i class="fas fa-chalkboard"></i> Actions and Parameters</h4>
+                    </div>
+                    <div class="row pad10">
+                        <div class="agentlistdiv">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td>REQUIRED</td>
+                                            <td>PARAMETER NAME</td>
+                                            <td>ENTITY</td>
+                                            <td>VALUE</td>
+                                            <td>PROMPTS</td>
+                                            <td>ACTION</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="actparatbody">
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="text" class="form-control inputstyle"></td>
+                                            <td>
+                                                <input type="text" class="form-control inputstyle" list="browsers">
+                                                <datalist id="browsers">
+                                                    <option value="Internet Explorer">
+                                                    <option value="Firefox">
+                                                    <option value="Google Chrome">
+                                                    <option value="Opera">
+                                                    <option value="Safari">
+                                                </datalist>
+                                            </td>
+                                            <td><input type="text" class="form-control inputstyle"></td>
+                                            <td><input type="text" class="form-control inputstyle"></td>
+                                            <td><i class="far fa-trash-alt actparatablefaicon"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center">
+                                <button class="actparasvaebtn">SAVE</button>
+                                <button class="actparaaddbtn">ADD NEW PARAMETER</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RESPONSE -->
+                <div class="container-fluid" id="responsecontainer">
+                    <div class="row pad10">
+                        <h4><i class="fas fa-laptop-code"></i> Response</h4>
+                    </div>
+                    <div class="row pad10">
+                        <div class="agentlistdiv">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td>REQUIRED</td>
+                                            <td>ACTION</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="responsetbody">
+                                        <tr>
+                                            <td><input type="text" class="form-control inputstyle"></td>
+                                            <td><i class="far fa-trash-alt responsetablefaicon"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center">
+                                <button class="responsesvaebtn">SAVE</button>
+                                <button class="responseaddbtn">ADD NEW RESPONSE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- NO DETAILS FOUND -->
+                <div class="container-fluid" id="nodetailscontainer">
+                    <div class="row pad10">
+                        <div class="text-center agentlistdiv">
+                            <img src="./../../assets/images/nodetailsfound.png">
+                            <p>There are no Details Found !!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CHATBOT DIV -->
+            <div class="outerchatbotdiv">
+                <div class="topchatdiv">
+                    <p class="pad10">
+                        <img src="./../../assets/images/BOT-Logo.png">
+                        Pybotmaker
+                        <i onclick="chatbotclose()" class="far fa-times-circle"></i>
+                    </p>
+                </div>
+                <div class="centerchatdiv">
+                    <div class="leftsidemsgdiv">
+                        <span class="leftsidemsg">
+                            Welcome to Pybotmaker.
+                        </span>
+                    </div>
+                    <div class="rightsidemsgdiv">
+                        <span class="rightsidemsg">
+                            Hi
+                        </span>
+                    </div>
+                    <div class="leftsidemsgdiv">
+                        <span class="leftsidemsg">
+                            Welcome to Pybotmaker.
+                        </span>
+                    </div>
+                    <div class="rightsidemsgdiv">
+                        <span class="rightsidemsg">
+                            Hi
+                        </span>
+                    </div>
+                    <div class="leftsidemsgdiv">
+                        <span class="leftsidemsg">
+                            Welcome to Pybotmaker.
+                        </span>
+                    </div>
+                    <div class="rightsidemsgdiv">
+                        <span class="rightsidemsg">
+                            Hi
+                        </span>
+                    </div>
+                    <div class="leftsidemsgdiv">
+                        <span class="leftsidemsg">
+                            Welcome to Pybotmaker.
+                        </span>
+                    </div>
+                    <div class="rightsidemsgdiv">
+                        <span class="rightsidemsg">
+                            Hi
+                        </span>
+                    </div>
+                </div>
+                <div class="bottomchatdiv">
+                    <div class="input-group">
+                        <input type="text" class="form-control inputstyle" placeholder="Try it Now ... ">
+                        <span style="background: #fff;border: 0;" class="input-group-addon" onclick="intentparatoggle();"><i class="fas fa-angle-up intentparadivopenicon"></i></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="chatbotwithbgdiv" onclick="chatbotopen()">
+                <img src="./../../assets/images/chatbotwithbg.png">
+            </div>
+            <div class="intentparadiv">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

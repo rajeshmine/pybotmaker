@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PYBOTMAKER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../../assets/css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./../../assets/js/common.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="gradient1">
+        <nav class="navbar pad10">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./../../index.html">
+                        <span><img class="pybotmakerlogo" src="./../../assets/images/BOT-Logo.png"></span>
+                        PYBOTMAKER
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="./../../index.html">Home</a></li>
+                        <li><a href="./../features/features.html">Features</a></li>
+                        <li><a href="./../help/help.html">Help</a></li>
+                        <li><a href="#" href="#" data-toggle="modal" data-target="#contactusmodal">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="border1solid navsignup" href="#" data-toggle="modal" data-target="#signupmodal"><span
+                                    class="glyphicon glyphicon-user"></span>
+                                Sign Up</a></li>
+                        <li><a href="#" class="border1solid navlogin" data-toggle="modal" data-target="#loginmodal"><span
+                                    class="glyphicon glyphicon-log-in"></span>
+                                Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <img style="width: 100%;margin: 0 auto;" class="img-responsive" src="./../../assets/images/attachment.png">
+                </div>
+            </div>
+        </div>
+        <a href="#choosemode"><button class="buildyourprobtn">Build Your Project</button></a>
+    </div>
+    <div class="container-fluid">
+        <div class="how-section1">
+            <div class="row">
+                <h4 class="text-center">Build your project</h4>
+                <h4 class="subheading">Without knowing the code just within some click you can train your bot easily
+                    and integrate in all the platforms as it is platform independent with testing of your training
+                    phases. Click on New project to create the project.
+                </h4>
+            </div>
+            <div class="row" id="choosemode">
+                <h4>Choose Developer or Customer</h4>
+                <div class="col-sm-6">
+                    <div class="row boxshadow1 pad10 whitebg mar0">
+                        <div class="col-sm-12">
+                            <div>
+                                <img class="creatprojectmodeimage" src="./../../assets/images/developer.png">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>DEVELOPER</h4>
+                            <p  class="height130">
+                                Build Your chatbot with world class conversational experiences between human and
+                                computers.create
+                                and test your own chatbot project and start training your bot.We use artificial
+                                intelligence and
+                                machine learning algorithms to make your chatbot easy and ultra productive.
+                            </p>
+                            <div  class="alignrgt">
+                                <button class="developermodebtn" onclick="develpoermode()">Start Developer Mode</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="row boxshadow1 pad10 whitebg mar0">
+                        <div class="col-sm-12">
+                            <div>
+                                <img class="creatprojectmodeimage" src="./../../assets/images/customer.png">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>CUSTOMER</h4>
+                            <p class="height130">Choose our own customized default chatbots.Copy a simple line of Javascript in to the
+                                html of your
+                                website and the chatbot starts working instantly.Easy to edit the chatbot responses.</p>
+                            <div class="alignrgt">
+                                <button class="customermodebtn" onclick="customermode()"> Start Customer Mode</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="createnewprojectdiv animated fadeInLeft">
+                <div class="" style=" background: url(./../../assets/images/dna.svg) center/cover;">
+                    <button class="createnewprojectdivclosebtn" onclick="createnewprojectdivclose()">
+                        &times;
+                    </button>
+                    <img class="img-responsive" src="./../../assets/images/createnewproject.png">
+                </div>
+                <div class="pad10">
+                    <p class="projectnametxt">Create New Project</p>
+                    <div class="pad10">
+                        <input type="text" class="form-control inputstyle">
+                    </div>
+                    <div class="pad10 text-center">
+                        <button class="createnewprojectbtn">Create project</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row" id="createprojectdivdeveloper">
+                <h4>Project -  Developer</h4>
+                <div class="col-sm-3 createprojetccol">
+                    <div class="projectdiv" onclick="createnewprojectdivopen()">
+                        <div class="text-center pad10">
+                            <img class="newprojectimg" src="./../../assets/images/newproject.png">
+                        </div>
+                        <div class="text-center pad10">
+                            <p class="projectnametxt">CREATE PROJECT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 createprojetccol">
+                    <div class="projectdiv" onclick="gotodashboard()">
+                        <div class="text-center pad10">
+                            <img class="newprojectimg" src="./../../assets/images/project.png">
+                        </div>
+                        <div class="text-center pad10">
+                            <p class="projectnametxt">HOBBY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 createprojetccol">
+                    <div class="projectdiv" onclick="gotodashboard()">
+                        <div class="text-center pad10">
+                            <img class="newprojectimg" src="./../../assets/images/project.png">
+                        </div>
+                        <div class="text-center pad10">
+                            <p class="projectnametxt">MYBOT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="createprojectdivcustomer">
+                <h4>Project -  Customer</h4>                
+                <div class="col-sm-3 createprojetccol">
+                    <div class="projectdiv" onclick="gotodashboard()">
+                        <div class="text-center pad10">
+                            <img class="newprojectimg" src="./../../assets/images/project.png">
+                        </div>
+                        <div class="text-center pad10">
+                            <p class="projectnametxt">HOBBY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 createprojetccol">
+                    <div class="projectdiv" onclick="gotodashboard()">
+                        <div class="text-center pad10">
+                            <img class="newprojectimg" src="./../../assets/images/project.png">
+                        </div>
+                        <div class="text-center pad10">
+                            <p class="projectnametxt">MYBOT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="footerlogodiv">
+                        <img src="./../../assets/images/ss.png">
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <ul class="footerul">
+                        <li><a href="./../../index.html">Home</a></li>
+                        <li><a href="./../features/features.html">Features</a></li>
+                        <li><a href="./../help/help.html">Help</a></li>
+                        <li><a data-toggle="modal" data-target="#contactusmodal">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <p class="copyrgttxt">© Copyright 2018 Prematix Software Solutions Pvt Ltd - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <a id="scrolltop"><span class="glyphicon glyphicon-menu-up pad10"></span></a>
+</body>
+
+</html>
